@@ -1,1 +1,186 @@
 
+body{
+  overflow-x: hidden;
+  font-family: "メイリオ";
+}
+#title{
+  width : 100%;
+  height : 110%;
+  text-align: center;
+  padding-top: 8%; 
+  padding-bottom : 20%;
+  background-image : url(./kougousii.jpg);
+  background-size : cover;
+  
+  vertical-align: top;
+}
+#title > h1 {
+  font-size:400%;
+  font-family : serif;
+  color : #ffffffff;
+}
+#title > h2 {
+  color: #000;
+  font-family : serif;
+
+}
+#title > button{
+  background-color: #e6e6fa;
+  font-weight: 300;
+  scale: 2.0;
+  margin-top: 40px;
+}
+#main_content{
+  display: none;
+}
+#which{
+  text-align: center;
+  font-size:200%;
+}
+p{
+    font:
+        1rem 'Fira Sans',
+        sans-serif;
+    font-weight : 600;
+}
+li{
+    list-style: none;
+    opacity : 0.1;
+}
+.question + li {
+  opacity : 1.0;
+}
+input[type="radio"] {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    vertical-align: -2px;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+    transform: scale(3.0);
+    margin: 25px; 
+  }
+  
+  input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #05f8d4;
+    content: '';
+  }
+ul li div :nth-of-type(1){
+  transform: scale(3.5);
+  border-color: #9400d3;
+}
+ul li div :nth-of-type(2){
+  transform: scale(2.6);
+  border-color: #ee82ee;
+
+}ul li div :nth-of-type(3){
+  transform: scale(2.0);
+  border-color: #808080;
+}ul li div :nth-of-type(4){
+  transform: scale(2.6);
+  border-color: #77ff00;
+}ul li div :nth-of-type(5){
+  transform: scale(3.5);
+  border-color: #adff2f;
+}
+
+.question{
+  text-align: center;
+}
+#result{
+  display: none;
+  top : 0;
+  left : 0;
+  height : 100%;
+  padding-top : 1%;
+  width : 100%;
+  background-size : cover;
+  vertical-align: top;
+  background-image: linear-gradient(90deg, rgba(209, 253, 254, 1) 24%, rgba(253, 219, 146, 1));
+
+}
+#result_container{
+  background-color: chartreuse;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, rgba(253, 219, 146, 1), rgba(209, 253, 254, 1) 73%);
+  margin : 20%;
+  padding-bottom : 10%;
+  animation-name:fadeInAnime; animation-duration:1.5s; animation-fill-mode:forwards; opacity:0;
+}
+#result_container > p{
+  color: #515151;
+  font-size: small;
+  
+}
+#result_container > h1{
+  text-align: center;
+  font-size: 200%;
+}
+#imgArea {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+#imgArea{
+  margin-bottom: 15px;
+  padding-bottom 15px;
+}
+footer{
+  display: none;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background: #05f8d4;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(168, 202, 240, 1), rgba(233, 240, 250, 1));
+  animation-name:fadeInAnime; animation-duration:1.5s; animation-fill-mode:forwards; opacity:0;
+}
+progress{
+  width: 60%;
+  height: 30px;
+}
+footer > p{
+  padding-left: 50%;
+  scale: 1.2;
+}
+#result_button{
+  margin-bottom: 300px;
+  margin-left: 50%;
+  background-color: #e6e6fa;
+  font-weight: 300;
+  scale: 2.0;
+  margin-top: 40px;
+}
+#result_name{
+  font-family : serif;
+  font-weight : 900;
+}
+
+#retry_button{
+  margin-left: 50%;
+  background-color: #e6e6fa;
+  font-weight: 300;
+  scale: 2.0;
+  margin-top: 40px;
+
+}
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
