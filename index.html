@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>診断</title>
+</head>
+<body>
+    <div id="title">
+        <h1>神様MBTI診断</h1>
+        <h2>あなたはどんなタイプの神様？</h2>
+        <button id="start" onClick="Start()">診断を始める</button>
+    </div>
+    <div id="main_content" >
+        <span id="which" style="display : flex; text-align: center; transform: scale(1.5);" ><p style=" padding-left: 440px; font-weight: 700; color: #9400d3;">同意しない</p><p style=" padding-left: 350px; font-weight: 700; color: #adff2f;">同意する</p></span>
+        <ul class="question">
+            <li>
+                <p>挨拶はよくするほうだ。</p>
+                <div>
+                    <input onClick="AddNumber(0,1)" type="radio" name="1" class="radio"/>
+                    <input onClick="AddNumber(0,2)" type="radio" name="1" id="" class="radio"/>
+                    <input onClick="AddNumber(0,3)" type="radio" name="1" id=""class="radio"/>
+                    <input onClick="AddNumber(0,4)" type="radio" name="1" id=""class="radio"/>
+                    <input onClick="AddNumber(0,5)" type="radio" name="1" id=""class="radio"/>
+                </div>
+            </li>
+            <li>
+                <p>服を着るのがめんどくさい。</p>
+                <div>
+                    <input onClick="AddNumber(1,1)" type="radio" name="2" class="radio"/>
+                    <input onClick="AddNumber(1,2)" type="radio" name="2" id="" class="radio"/>
+                    <input onClick="AddNumber(1,3)" type="radio" name="2" id=""class="radio"/>
+                    <input onClick="AddNumber(1,4)" type="radio" name="2" id=""class="radio"/>
+                    <input onClick="AddNumber(1,5)" type="radio" name="2" id=""class="radio"/>
+                </div>
+            </li>
+            <li>
+                <p>自分は美しいと思う。</p>
+                <div>
+                    <input onClick="AddNumber(2,1)" type="radio" name="3" class="radio"/>
+                    <input onClick="AddNumber(2,2)" type="radio" name="3" id="" class="radio"/>
+                    <input onClick="AddNumber(2,3)" type="radio" name="3" id=""class="radio"/>
+                    <input onClick="AddNumber(2,4)" type="radio" name="3" id=""class="radio"/>
+                    <input onClick="AddNumber(2,5)" type="radio" name="3" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>誇張モノマネをし、よくバッシングを受ける。</p>
+                <div>
+                    <input onClick="AddNumber(3,1)" type="radio" name="4" class="radio"/>
+                    <input onClick="AddNumber(3,2)" type="radio" name="4" id="" class="radio"/>
+                    <input onClick="AddNumber(3,3)" type="radio" name="4" id=""class="radio"/>
+                    <input onClick="AddNumber(3,4)" type="radio" name="4" id=""class="radio"/>
+                    <input onClick="AddNumber(3,5)" type="radio" name="4" id=""class="radio"/>
+                </div>
+            </li>
+            <li style="padding-top: 100px; margin-bottom: 200px;">
+                <p>この眼鏡を持っている。</p>
+                <img src="./megane.jpeg" alt="megane" height=300 width=400></img>
+                <div>
+                    <input onClick="AddNumber(4,1)" type="radio" name="5" class="radio"/>
+                    <input onClick="AddNumber(4,2)" type="radio" name="5" id="" class="radio"/>
+                    <input onClick="AddNumber(4,3)" type="radio" name="5" id=""class="radio"/>
+                    <input onClick="AddNumber(4,4)" type="radio" name="5" id=""class="radio"/>
+                    <input onClick="AddNumber(4,5)" type="radio" name="5" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>お金にがめつい。</p>
+                <div>
+                    <input onClick="AddNumber(5,1)" type="radio" name="6" class="radio"/>
+                    <input onClick="AddNumber(5,2)" type="radio" name="6" id="" class="radio"/>
+                    <input onClick="AddNumber(5,3)" type="radio" name="6" id=""class="radio"/>
+                    <input onClick="AddNumber(5,4)" type="radio" name="6" id=""class="radio"/>
+                    <input onClick="AddNumber(5,5)" type="radio" name="6" id=""class="radio"/>
+                </div>
+            </li>
+            <li>
+                <p>よく嘘をつく。</p>
+                <div>
+                    <input onClick="AddNumber(6,1)" type="radio" name="7" class="radio"/>
+                    <input onClick="AddNumber(6,2)" type="radio" name="7" id="" class="radio"/>
+                    <input onClick="AddNumber(6,3)" type="radio" name="7" id=""class="radio"/>
+                    <input onClick="AddNumber(6,4)" type="radio" name="7" id=""class="radio"/>
+                    <input onClick="AddNumber(6,5)" type="radio" name="7" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>運動はよくするほうだ。</p>
+                <div>
+                    <input onClick="AddNumber(7,1)" type="radio" name="8" class="radio"/>
+                    <input onClick="AddNumber(7,2)" type="radio" name="8" id="" class="radio"/>
+                    <input onClick="AddNumber(7,3)" type="radio" name="8" id=""class="radio"/>
+                    <input onClick="AddNumber(7,4)" type="radio" name="8" id=""class="radio"/>
+                    <input onClick="AddNumber(7,5)" type="radio" name="8" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>芸術に長けている。</p>
+                <div>
+                    <input onClick="AddNumber(8,1)" type="radio" name="9" class="radio"/>
+                    <input onClick="AddNumber(8,2)" type="radio" name="9" id="" class="radio"/>
+                    <input onClick="AddNumber(8,3)" type="radio" name="9" id=""class="radio"/>
+                    <input onClick="AddNumber(8,4)" type="radio" name="9" id=""class="radio"/>
+                    <input onClick="AddNumber(8,5)" type="radio" name="9" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>困っている人がいたら見て見ぬふりできない。</p>
+                <div>
+                    <input onClick="AddNumber(9,1)" type="radio" name="10" class="radio"/>
+                    <input onClick="AddNumber(9,2)" type="radio" name="10" id="" class="radio"/>
+                    <input onClick="AddNumber(9,3)" type="radio" name="10" id=""class="radio"/>
+                    <input onClick="AddNumber(9,4)" type="radio" name="10" id=""class="radio"/>
+                    <input onClick="AddNumber(9,5)" type="radio" name="10" id=""class="radio"/>
+                </di0v>
+            </li><li>
+                <p>住んでいる国が好きだ。</p>
+                <div>
+                    <input onClick="AddNumber(10,1)" type="radio" name="11" class="radio"/>
+                    <input onClick="AddNumber(10,2)" type="radio" name="11" id="" class="radio"/>
+                    <input onClick="AddNumber(10,3)" type="radio" name="11" id=""class="radio"/>
+                    <input onClick="AddNumber(10,4)" type="radio" name="11" id=""class="radio"/>
+                    <input onClick="AddNumber(10,5)" type="radio" name="11" id=""class="radio"/>
+                </div>
+            </li>
+            <li>
+                <p>場の雰囲気を明るくするのが得意だ。</p>
+                <div>
+                    <input onClick="AddNumber(11,1)" type="radio" name="12" class="radio"/>
+                    <input onClick="AddNumber(11,2)" type="radio" name="12" id="" class="radio"/>
+                    <input onClick="AddNumber(11,3)" type="radio" name="12" id=""class="radio"/>
+                    <input onClick="AddNumber(11,4)" type="radio" name="12" id=""class="radio"/>
+                    <input onClick="AddNumber(11,5)" type="radio" name="12" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>マメなほうだ。</p>
+                <div>
+                    <input onClick="AddNumber(12,1)" type="radio" name="13" class="radio"/>
+                    <input onClick="AddNumber(12,2)" type="radio" name="13" id="" class="radio"/>
+                    <input onClick="AddNumber(12,3)" type="radio" name="13" id=""class="radio"/>
+                    <input onClick="AddNumber(12,4)" type="radio" name="13" id=""class="radio"/>
+                    <input onClick="AddNumber(12,5)" type="radio" name="13" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>忍耐強い。</p>
+                <div>
+                    <input onClick="AddNumber(13,1)" type="radio" name="14" class="radio"/>
+                    <input onClick="AddNumber(13,2)" type="radio" name="14" id="" class="radio"/>
+                    <input onClick="AddNumber(13,3)" type="radio" name="14" id=""class="radio"/>
+                    <input onClick="AddNumber(13,4)" type="radio" name="14" id=""class="radio"/>
+                    <input onClick="AddNumber(13,5)" type="radio" name="14" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>欲が少ない。</p>
+                <div>
+                    <input onClick="AddNumber(14,1)" type="radio" name="15" class="radio"/>
+                    <input onClick="AddNumber(14,2)" type="radio" name="15" id="" class="radio"/>
+                    <input onClick="AddNumber(14,3)" type="radio" name="15" id=""class="radio"/>
+                    <input onClick="AddNumber(14,4)" type="radio" name="15" id=""class="radio"/>
+                    <input onClick="AddNumber(14,5)" type="radio" name="15" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>噂話の標的になる。</p>
+                <div>
+                    <input onClick="AddNumber(15,1)" type="radio" name="16" class="radio"/>
+                    <input onClick="AddNumber(15,2)" type="radio" name="16" id="" class="radio"/>
+                    <input onClick="AddNumber(15,3)" type="radio" name="16" id=""class="radio"/>
+                    <input onClick="AddNumber(15,4)" type="radio" name="16" id=""class="radio"/>
+                    <input onClick="AddNumber(15,5)" type="radio" name="16" id=""class="radio"/>
+                </div>
+            </li><li>
+                <p>実は自分は完璧だ。</p>
+                <div>
+                    <input onClick="AddNumber(16,1)" type="radio" name="17" class="radio"/>
+                    <input onClick="AddNumber(16,2)" type="radio" name="17" id="" class="radio"/>
+                    <input onClick="AddNumber(16,3)" type="radio" name="17" id=""class="radio"/>
+                    <input onClick="AddNumber(16,4)" type="radio" name="17" id=""class="radio"/>
+                    <input onClick="AddNumber(16,5)" type="radio" name="17" id=""class="radio"/>
+                </div>
+            </li>
+        </ul>
+        <button id="result_button" onClick="End()">結果を見る</button>
+    </div>
+    <div id="result">
+        <div id="result_container">
+            <p style="font-size : 150%;">あなたは...</p>
+            <h1 id="result_name">a</h1>
+            <div id="imgArea"></div>
+            <p id="explain"></p>
+        </div>
+        <button id="retry_button" onClick="ReStart()">もう一回</button>
+    </div>
+    <footer id="footer">
+        <p id="prog_persent">0%</p>
+        <progress id="prog_bar" max="100" value="0"></progress>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
